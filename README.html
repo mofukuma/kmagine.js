@@ -1,0 +1,66 @@
+<h1>kmagine.js</h1>
+<p>A sound and animation library for iOS Hybrid Apps, mobile first teaser sites, ads, or cross platform casual games.</p>
+<p>Available to run iOS, Chrome, IE9, Firefox with one source of JavaScript/HTML.</p>
+<p>Cross platform low latency and sync-beat sound engine.
+( Chrome-&gt;Webkit Audio API / iOS-&gt;Native AVAudioPlayer / IE, Firefox-&gt; Flash )</p>
+<p>Useful tween animation function with CSS3 transition, like jQuery.animate.
+Because CSS3 transition provides <em>native quality</em> GPU animation, than running matrix calculations with JavaScript at every frame. So, kmagine don&#39;t use canvas.</p>
+<p>(This way is similar to Google Web Designer, jQuery.transit.js)</p>
+<p>An useful script that convert .psd file to a kmagine scene data and pngs per photoshop layer. - psd2kmagine.jsx</p>
+<h2>Usage</h2>
+<p>Requires jQuery 1.8+.</p>
+<pre><code class="lang-html">&lt;script src=&#39;jquery-1.8.1.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;kmagine.js&#39;&gt;&lt;/script&gt;</code></pre>
+<p>Smooth tween animation with CSS transform, transiton, usages like jQuery.animate.</p>
+<pre><code class="lang-javascript">$(&quot;#it&quot;).to({x:120, y:100}, 1000, &quot;swing&quot;);</code></pre>
+<p>Deffered animation.</p>
+<pre><code class="lang-javascript">$(&quot;#it&quot;)
+    .to({x:0 , y:0 })
+    .to({x:50, y:0 }, 1000)
+    .to({x:0 , y:50}, 1000)
+    .to({scale:2, rotate:180}, 800)
+    .to({scaleX:0, scaleY:4, opacity:0}, 500)
+    ;</code></pre>
+<p>Loop animation.</p>
+<pre><code class="lang-javascript">$(&quot;#it&quot;)
+    .loop()
+        .to({rotate:&quot;+=180&quot;}, 1000, &quot;linear&quot;)
+    .endloop()
+    ;</code></pre>
+<p>Animation by presets.</p>
+<pre><code class="lang-javascript">$(&quot;#it&quot;).to(&quot;poyo&quot;);</code></pre>
+<p>Playing sound. (full-auto init, load, play)</p>
+<pre><code class="lang-javascript">km.playSound(&quot;media/test.mp3&quot;);</code></pre>
+<p>Playing looped bgm.</p>
+<pre><code class="lang-javascript">km.playSound(&quot;media/test_160.mp3&quot;);
+//or km.playSound({src:&quot;media/test.mp3&quot;, bpm:160});</code></pre>
+<p>Setting beat-callback in bpm sync.</p>
+<pre><code class="lang-javascript">km.onBeat(function(beat){
+    console.log(&quot;beat count:&quot;+beat);
+    $(&quot;#it&quot;).to(&quot;poyo&quot;);
+});</code></pre>
+<p>Loading sounds, images.</p>
+<pre><code class="lang-javascript">km.load(&quot;img/top.png&quot;);</code></pre>
+<pre><code class="lang-javascript">// Available to load by array mixed sounds and images.
+km.load([&quot;media/test.mp3&quot;, {src:&quot;media/bgm.mp3&quot;, bpm:130}, &quot;img/my1.png&quot;], function(){
+    //on loading finished
+
+    km.sounds.test.play();
+    // or km.playSound(&quot;test&quot;);
+
+    //...
+});</code></pre>
+<p>Appending sprites from scene data.</p>
+<pre><code class="lang-javascript">var o = $(&quot;#root&quot;).scene(&quot;first&quot;);
+
+o.it.to({x:&quot;+=100&quot;});</code></pre>
+<p>Scene transition.</p>
+<pre><code class="lang-javascript">$(&quot;#root&quot;).scene(&quot;first&quot;, 1000, &quot;fade&quot;);
+//... later ...
+$(&quot;#root&quot;).scene(&quot;secound&quot;, 1000, &quot;fade&quot;);</code></pre>
+<h2>Acknowledgements</h2>
+<p>© 2013, mofukuma. Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+<ul>
+<li>Website <a href="http://mofukuma.com/">http://mofukuma.com/</a></li>
+<li>Twitter <a href="http://twitter.com/mofukuma">@mofukuma</a></li>
+</ul>

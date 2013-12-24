@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Sound</title>
+	<meta name="description" content="" />
+	
+	<script src="js/swfobject.js"></script>
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="../../../kmagine.js"></script>
+	
+	<script>
+		/*
+		var flashvars = {
+			id:"bgm06",
+			src:"bgm06.mp3",
+			bpm:130
+		};
+		var params = {
+			menu: "false",
+			scale: "noScale",
+			allowFullscreen: "false",
+			allowScriptAccess: "always",
+			bgcolor: "",
+			wmode: "direct" // can cause issues with FP settings & webcam
+		};
+		var attributes = {
+			id:"bgm06"
+		};
+		swfobject.embedSWF(
+			"kSound.swf", 
+			"altContent", "100%", "100%", "10.0.0", 
+			"expressInstall.swf", 
+			flashvars, params, attributes);
+			*/
+			
+		
+		$(function(){
+			//km.load("bgm06.mp3")
+			km.load("bgm06_130.mp3", function(){
+				console.log("ok");
+				km.sounds.bgm06_130.play();
+				$("#it").onBeat(onBeat1);
+				$("#it2").addClass("js-beat");
+				$("#it2").onBeat(function(){ if(km.beat%2 == 0)	$(this).to({"x":"+=4"},0);  });
+				//setInterval(onBeat2 ,this.mspb);
+			});
+			$("body").click(function(){ km.sounds.bgm06_130.destroy(); });
+			
+			km.load({src:"mameden.mp3",bpm:149});
+
+			var beat =0;
+			function onBeat1(){
+				console.log(beat);
+				beat++;
+				if(beat%4 == 0)	$("#it").to({"x":"+=4"},0);
+				if(beat%4 == 2)	$("#it").to({"x":"+=4"},0);
+				
+				if(beat == 8) console.log(km.sounds.bgm06_130.setVolume(0.5));
+				if(beat == 12) {km.sounds.bgm06_130.pause(); setTimeout(function(){km.sounds.bgm06_130.play();},2000)  }
+				if(beat == 14)  {km.sounds.bgm06_130.stop(); setTimeout(function(){km.sounds.bgm06_130.play();},2000)  }
+				if(beat == 16)  { setTimeout(function(){km.playSound("mameden");},2000)  }
+				
+			};
+			var beat2=0;
+			function onBeat2(){
+				beat2++;
+				if(beat2%2 == 0)$(this).to("poyo");
+			}
+			_km.onBGMComplete = function(){
+				console.log("end");
+			};
+		});
+		
+	</script>
+	<style>
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+	</style>
+</head>
+<body>
+	<div>test</div>
+	       <div id="it" >a</div>
+	        <div id="it2" >a</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+var _km = _km||{};
+
+_km.preloads = _km.preloads || [];
+
+_km.preloads = _km.preloads.concat([
+'img/k_kiso.png',
+'img/k_aki.png',
+'img/bg.png',
+'img/mob2.png',
+'img/mob1.png',
+{'sample1':{children:{
+"k_kiso":{"sprite":"k_kiso","z-index":2,"x":2,"y":571,"children":{
+"k_aki":{"sprite":"k_aki","x":108,"y":63}
+}}
+,'bg':{sprite:'bg', src:'img/bg.png',x:0,y:0,w:640,h:960,"z-index":0}
+,'mob2':{sprite:'mob2', src:'img/mob2.png',x:540,y:749,w:97,h:211,"z-index":101}
+,'mob1':{sprite:'mob1', src:'img/mob1.png',x:445,y:758,w:97,h:202,"z-index":102}
+}}}
+]);

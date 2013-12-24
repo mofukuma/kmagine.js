@@ -1,0 +1,9 @@
+{
+    "name": "Kmagine.js API",
+    "description": "Kmagine.js API: a sound and animation library for iOS Hybrid Apps, mobile first sites, ads, or static games",
+    "version": "0.7.0",
+    "url": "http://mofukuma.net/kmagine",
+    "options": {
+        "outdir": "./document"
+    }
+}

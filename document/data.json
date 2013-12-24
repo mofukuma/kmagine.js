@@ -1,0 +1,1029 @@
+{
+    "project": {
+        "name": "Kmagine.js API",
+        "description": "Kmagine.js API: a sound and animation library for iOS Hybrid Apps, mobile first sites, ads, or static games",
+        "version": "0.7.0",
+        "url": "http://mofukuma.net/kmagine"
+    },
+    "files": {
+        "as3\\Sound\\bin\\js\\jquery-1.9.1.js": {
+            "name": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "kmagine.js": {
+            "name": "kmagine.js",
+            "modules": {},
+            "classes": {
+                "km": 1,
+                "km.Sound": 1,
+                "jQuery.fn": 1,
+                "km.Image": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "km": {
+            "name": "km",
+            "shortname": "km",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "kmagine.js",
+            "line": 30,
+            "description": "くまじん",
+            "static": 1
+        },
+        "km.Sound": {
+            "name": "km.Sound",
+            "shortname": "km.Sound",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "kmagine.js",
+            "line": 943,
+            "description": "サウンドクラス\nコンストラクタでサウンドをロード。\nkm.loadでロードしたときにkm.Soundインスタンスが生成され\nkm.sounds以下に格納される。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "url",
+                    "description": "ロードするサウンドのURL",
+                    "type": "String"
+                },
+                {
+                    "name": "bpm",
+                    "description": "曲の場合、BPMを指定",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "ロード完了後のコールバック",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "km.Sound"
+            }
+        },
+        "jQuery.fn": {
+            "name": "jQuery.fn",
+            "shortname": "jQuery.fn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "kmagine.js",
+            "line": 1319,
+            "description": "jQueryプラグイン"
+        },
+        "km.Image": {
+            "name": "km.Image",
+            "shortname": "km.Image",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "kmagine.js",
+            "line": 2399,
+            "description": "画像クラス\nロードした画像を管理するクラス。km.loadで使われる。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "url",
+                    "description": "ロードする画像のURL（png, jpeg, gif）",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "km.Image"
+            }
+        }
+    },
+    "classitems": [
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 3837,
+            "description": "For feature detection",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to test for native support",
+                    "type": "Function"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 3845,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 3865,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 3874,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 4001,
+            "description": "Detect xml",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 4012,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "km"
+        },
+        {
+            "file": "as3\\Sound\\bin\\js\\jquery-1.9.1.js",
+            "line": 4505,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1,
+            "description": "kmagine.js\n\nJavaScript\n\nThis code is published under the MIT License (MIT).\nhttp://www.opensource.org/licenses/mit-license.php\n\nFor examples, reference, and other information see\nhttp://",
+            "author": "mofukuma",
+            "copyright": "(c) 2013 by Daisuke Sugiyama",
+            "see": [
+                "http://"
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 60,
+            "description": "初期化用jsonの読出。通常は呼び出す必要なし",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "ロード完了後のコールバック",
+                    "optional": true
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 103,
+            "description": "限りなくユルく使える素材ロード",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "読み込むデータのURLまたは設定オブジェクト、またはそれらの配列",
+                    "type": "String/object/array"
+                }
+            ],
+            "example": [
+                " km.load(\"images/foo.png\");",
+                " km.load(\"images/foo.png\", \"images/bar.jpg\");",
+                " km.load([\"images/foo.png\", \"images/bar.jpg\"]);",
+                " km.load([\"images/foo.png\", \"images/bar.jpg\"], function(){...onload callback...} );",
+                " km.load(\"images/foo.png\", \"sounds/se.mp3\", \"sounds/bgm_130.mp3\");\n // filename_XXX.mp3など、末尾に数字を追加することで、自動ループとbpmが指定できる",
+                " km.load({src:\"images/foo.png\"}, {src:\"sounds/se.mp3\"}, {src:\"sounds/bgm_130.mp3\", bpm:130});\n // 連想配列で詳細指定することも可能。これは１つ上と同じ処理をおこなう"
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 229,
+            "description": "サウンドを再生する。\n事前にロードしていない場合、自動でロードしてから再生する",
+            "itemtype": "method",
+            "name": "playSound",
+            "params": [
+                {
+                    "name": "k",
+                    "description": "サウンドファイルのURL、またはロードしたサウンドのキー",
+                    "type": "String"
+                }
+            ],
+            "example": [
+                " km.playSound(\"sound/bgm.mp3\");",
+                " km.playSound(\"bgm\");"
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 260,
+            "description": "サウンドを停止する。\n引数なしの場合、全サウンドストップ",
+            "itemtype": "method",
+            "name": "stopSound",
+            "params": [
+                {
+                    "name": "k",
+                    "description": "止めるサウンドキー",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 289,
+            "description": "transition3dを使うか？",
+            "itemtype": "property",
+            "name": "config.mode3d",
+            "default": "true",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 295,
+            "description": "sound用swfの場所",
+            "itemtype": "property",
+            "name": "config.swfpath",
+            "default": "ksound.swf",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 301,
+            "description": "$.fn.toでCSS3 transirionに指定するeasingのプリセット",
+            "itemtype": "property",
+            "name": "config.easingPresets",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 308,
+            "description": "$.fn.toでのCSS3 transitionのデフォルト",
+            "itemtype": "property",
+            "name": "config.defaultEasing",
+            "default": "swing",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 314,
+            "description": "$.fn.sceneの切り替えエフェクトのデフォルト",
+            "itemtype": "property",
+            "name": "config.defaultSceneTransition",
+            "default": "fade",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 320,
+            "description": "$.fn.sceneの切り替えエフェクトの時間(ms)デフォルト",
+            "itemtype": "property",
+            "name": "config.defaultSceneTransitionTime",
+            "default": "300",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 329,
+            "description": "１ビートの間隔（ミリ秒）",
+            "itemtype": "property",
+            "name": "beat",
+            "default": "400",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 336,
+            "description": "現在の経過ビート",
+            "itemtype": "property",
+            "name": "beatCount",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 400,
+            "description": "$.fn.toのプリセット集\nよく使うアニメはここに登録すると便利。\n$(\"#target\").to(\"poyo\", 100, \"swing\"); ←このように使う。",
+            "itemtype": "property",
+            "name": "toPreset",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 507,
+            "description": "$.fn.sceneでのシーン切り替わり方のプリセット集\n$(\"#target\").scene(\"first\", \"fade\", 500); ←このように使う。",
+            "itemtype": "property",
+            "name": "sceneTransitionPresets",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 565,
+            "description": "JSONシーンデータをロード(内部関数)\nmethod loadScene\nparam  {string} key  シーンデータのキー\nparam  {string} json 読み込むJSONシーンデータ\nreturn {jqueryobj}      生成したDOMのjQueryオブジェクト",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 598,
+            "description": "JSONシーンデータをロード\nmethod loadResourceCSS\nparam  {string} json 読み込むJSONリソースデータ\nparam  {string} imgpath パス、なければkm.config.imgpath使用\nreturn {string}      生成したスタイルシート",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 666,
+            "description": "音楽にあわせて1ビート毎に実行される関数の登録",
+            "itemtype": "method",
+            "name": "onBeat",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "1ビート毎に実行される関数",
+                    "type": "Function"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 723,
+            "description": "メインループを実行開始後からの総フレーム数\nproperty frame\ntype {int}",
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 733,
+            "description": "1フレームごとに呼び出される関数を登録（非推奨",
+            "itemtype": "method",
+            "name": "onUpdate",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "1フレームごとに呼び出される関数",
+                    "type": "Function"
+                }
+            ],
+            "class": "km"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1095,
+            "description": "サウンドのロード(コンストラクタにて使用",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "k",
+                    "description": "ロードするサウンドのキー",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "ロードするサウンドのURL",
+                    "type": "String"
+                },
+                {
+                    "name": "bpm",
+                    "description": "曲の場合、BPMを指定",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "ロード完了後のコールバック",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1127,
+            "description": "サウンドのループ指定",
+            "itemtype": "method",
+            "name": "setLoop",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "ループする場合True",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1136,
+            "description": "サウンドのボリューム設定",
+            "itemtype": "method",
+            "name": "setVolume",
+            "params": [
+                {
+                    "name": "v",
+                    "description": "ボリューム値(0.0-1.0",
+                    "type": "Number"
+                }
+            ],
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1145,
+            "description": "サウンドのメモリ解放",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1231,
+            "description": "サウンドを再生する。",
+            "itemtype": "method",
+            "name": "play",
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1260,
+            "description": "サウンドを一時停止する。",
+            "itemtype": "method",
+            "name": "pause",
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1273,
+            "description": "サウンドを停止する。",
+            "itemtype": "method",
+            "name": "stop",
+            "class": "km.Sound"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1604,
+            "description": "くまじんのメインとなるトゥーインアニメ関数。\njQueryプラグインとして動作する。使い勝手はjQuery animateと同じ。\n内部でCSS3 transition-propertyを使用しているためGPUに乗り高FPSでヌルヌル動く。\n他、loop～endloopによる繰り返しアニメや、\nよくあるアニメを呼び出せるプリセット機能を搭載。",
+            "itemtype": "method",
+            "name": "to",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "CSSに設定する",
+                    "type": "Object"
+                },
+                {
+                    "name": "duration",
+                    "description": "アニメの長さ（ms）",
+                    "type": "Int",
+                    "optional": true
+                },
+                {
+                    "name": "easing",
+                    "description": "アニメ補完の種類",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "アニメ終了後に実行されるコールバック関数を指定",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "example": [
+                " $(\"#foo\").to({x: 0, y: 10}, 1000);",
+                " $(\"#foo\").to({x: 0, y: 10}, 1000, \"swing\", callback_fn );",
+                " $(\"#foo\").to( \"shake\", 400 ); //プリセット。400msの間、揺らす",
+                " $(\"#foo\").to( \"poyo\" ); //ぽよんとする。生物感を出すためのアニメ",
+                " $(\"#foo\").to( \"scaleOut\" ); //だんだん透明になりつつ大きくなっていく",
+                " $(\"#foo\").to( \"scaleIn\", 450 ); //上記の逆を450msで"
+            ],
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1779,
+            "description": "チェインメソッドアニメループ開始",
+            "itemtype": "method",
+            "name": "loop",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1796,
+            "description": "チェインメソッドアニメループ終端",
+            "itemtype": "method",
+            "name": "endloop",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1822,
+            "description": "アニメループ実行を停止",
+            "itemtype": "method",
+            "name": "stoploop",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1869,
+            "description": "移動。to関数　to({x:XXX ,y: XXX}, ...)　と同じ。\n引数なしの場合、リアルタイムの座標を返す",
+            "itemtype": "method",
+            "name": "pos",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "要素が本来表示される場所からのX位置を指定"
+                },
+                {
+                    "name": "y",
+                    "description": "要素が本来表示される場所からのY位置を指定"
+                },
+                {
+                    "name": "duration",
+                    "description": "アニメの長さ（ms）",
+                    "type": "Int"
+                },
+                {
+                    "name": "easing",
+                    "description": "アニメ補完の種類",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "アニメ完了後の処理",
+                    "type": "Function"
+                }
+            ],
+            "example": [
+                " $(\"#foo\").pos(10, 8); //x:10 y:8に移動",
+                " $(\"#foo\").pos(); //  リアルタイムローカル座標を返す。"
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1896,
+            "description": "強制停止。transition中でもその場で停止する。",
+            "itemtype": "method",
+            "name": "stopTo",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1918,
+            "description": "拡大縮小。to関数　to({scaleX:XXX,scaleY:XXX }, ...)と同じ。",
+            "itemtype": "method",
+            "name": "scale",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "X方向のスケール",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "Y方向のスケール",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "アニメの長さ(ms)",
+                    "type": "Ms",
+                    "optional": true
+                },
+                {
+                    "name": "easing",
+                    "description": "アニメ補完の種類",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "アニメ完了後の処理",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1936,
+            "description": "高速で非表示にする。画面外に移動している。点滅などに",
+            "itemtype": "method",
+            "name": "fhide",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1946,
+            "description": "高速で表示する。画面内に戻す。点滅などに",
+            "itemtype": "method",
+            "name": "fshow",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1956,
+            "description": "回転。to関数　to({rotate:XXX }, ...)と同じ。",
+            "itemtype": "method",
+            "name": "rotate",
+            "params": [
+                {
+                    "name": "r",
+                    "description": "回転度数を指定(deg)",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "アニメの長さ(ms)",
+                    "type": "Ms",
+                    "optional": true
+                },
+                {
+                    "name": "easing",
+                    "description": "アニメ補完の種類",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "アニメ完了後の処理",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1972,
+            "description": "透明度のフェード。to関数　to({opacity:XXX }, ...)と同じ。",
+            "itemtype": "method",
+            "name": "fade",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "透明度を指定",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "アニメの長さ(ms)",
+                    "type": "Ms",
+                    "optional": true
+                },
+                {
+                    "name": "easing",
+                    "description": "アニメ補完の種類",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "アニメ完了後の処理",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 1988,
+            "description": "ウエイトをいれる。to関数　to({delay:XXX }, ...)と同じ。",
+            "itemtype": "method",
+            "name": "wait",
+            "params": [
+                {
+                    "name": "t",
+                    "description": "ウエイトの長さ(ms)",
+                    "type": "Ms",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "ウエイト完了後の処理",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2002,
+            "description": "表示画像の変更",
+            "itemtype": "method",
+            "name": "sprite",
+            "params": [
+                {
+                    "name": "spriteid",
+                    "description": "スプライトIDを指定,アニメの場合配列で指定",
+                    "type": "String|array"
+                },
+                {
+                    "name": "t",
+                    "description": "",
+                    "type": "Int"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2030,
+            "description": "ルーズなクリック。\nマウスとタッチに対応。\nタッチした後ちょっとぐらいはみ出ても実行される。(40px)",
+            "itemtype": "method",
+            "name": "touchClick",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "クリック時の実行関数",
+                    "type": "Function"
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2092,
+            "description": "DOMに紐づく遅延実行。\n使い方はsetTimeoutとほぼ同じだがキーの指定で削除したり、\ndestroy関数時に後始末してくれるなど便利",
+            "itemtype": "method",
+            "name": "setTimeout",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "管理するID。指定なしの場合、IDで管理しない",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "遅延実行コールバック関数",
+                    "type": "Function"
+                },
+                {
+                    "name": "t",
+                    "description": "遅延実行の時間",
+                    "type": "Int"
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2138,
+            "description": "DOMに紐づく遅延実行を停止\n登録時のキーを指定すると停止してくれる",
+            "itemtype": "method",
+            "name": "clearTimeout",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "停止するID。指定なしの場合、DOMに紐づく遅延実行をすべて停止",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2169,
+            "description": "DOMに紐づく定期実行。\n使い方はsetIntervalとほぼ同じだがキーの指定で削除したり、\ndestroy関数時に後始末してくれるなど便利",
+            "itemtype": "method",
+            "name": "setInterval",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "管理するID。指定なしの場合、IDで管理しない",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "定期実行コールバック関数",
+                    "type": "Function"
+                },
+                {
+                    "name": "t",
+                    "description": "定期実行の時間",
+                    "type": "Int"
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2201,
+            "description": "DOMに紐づく定期実行を停止\n登録時のキーを指定すると停止してくれる",
+            "itemtype": "method",
+            "name": "clearInterval",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "停止するID。指定なしの場合、DOMに紐づく定期実行をすべて停止",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2230,
+            "description": "音楽にあわせて1ビートごとに呼び出される関数をDOMに登録\n引数が空の場合、登録したビート関数を解除",
+            "itemtype": "method",
+            "name": "onBeat",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "1ビートごとに呼び出される関数",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2248,
+            "description": "要素を削除する。\nremoveと同じだが、定期実行や遅延実行、ループ停止などの後片付けを行う。",
+            "itemtype": "method",
+            "name": "destroy",
+            "chainable": 1,
+            "class": "jQuery.fn"
+        },
+        {
+            "file": "kmagine.js",
+            "line": 2260,
+            "description": "シーンを切換する\nsceneidに空を指定するとシーン削除",
+            "itemtype": "method",
+            "name": "scene",
+            "params": [
+                {
+                    "name": "sceneid",
+                    "description": "切り替えシーンのIDを指定。空文字列の場合、削除",
+                    "type": "String"
+                },
+                {
+                    "name": "t",
+                    "description": "シーンの切り替わりアニメの時間(ms)",
+                    "type": "Int"
+                },
+                {
+                    "name": "transition",
+                    "description": "シーンの切り替わりアニメの種類を指定",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "jQuery.fn"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:3845"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:4012"
+        },
+        {
+            "message": "unknown tag: copyright",
+            "line": " kmagine.js:1"
+        },
+        {
+            "message": "Missing item type\nFor feature detection",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:3837"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:3845"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:3865"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:3874"
+        },
+        {
+            "message": "Missing item type\nDetect xml",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:4001"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:4012"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " as3\\Sound\\bin\\js\\jquery-1.9.1.js:4505"
+        },
+        {
+            "message": "Missing item type\nkmagine.js\n\nJavaScript\n\nThis code is published under the MIT License (MIT).\nhttp://www.opensource.org/licenses/mit-license.php\n\nFor examples, reference, and other information see\nhttp://",
+            "line": " kmagine.js:1"
+        },
+        {
+            "message": "Missing item type\nJSONシーンデータをロード(内部関数)\nmethod loadScene\nparam  {string} key  シーンデータのキー\nparam  {string} json 読み込むJSONシーンデータ\nreturn {jqueryobj}      生成したDOMのjQueryオブジェクト",
+            "line": " kmagine.js:565"
+        },
+        {
+            "message": "Missing item type\nJSONシーンデータをロード\nmethod loadResourceCSS\nparam  {string} json 読み込むJSONリソースデータ\nparam  {string} imgpath パス、なければkm.config.imgpath使用\nreturn {string}      生成したスタイルシート",
+            "line": " kmagine.js:598"
+        },
+        {
+            "message": "Missing item type\nメインループを実行開始後からの総フレーム数\nproperty frame\ntype {int}",
+            "line": " kmagine.js:723"
+        }
+    ]
+}
