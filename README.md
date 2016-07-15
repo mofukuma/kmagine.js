@@ -1,7 +1,7 @@
 kmagine.js
 ===================
 
-A sound and animation library for iOS Hybrid Apps, mobile first teaser sites, ads, or cross platform casual games.
+Animation and sound library for iOS Hybrid Apps, mobile first teaser sites, ads, or cross platform games.
 
 
 Available to run iOS, Chrome, IE9, Firefox with one source of JavaScript/HTML.
