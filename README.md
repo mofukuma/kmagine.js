@@ -112,7 +112,7 @@ $("#root").scene("first", 1000, "fade");
 $("#root").scene("secound", 1000, "fade");
 ```
 
-Acknowledgements
+License
 ----------------
 
 © 2013, mofukuma. Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
